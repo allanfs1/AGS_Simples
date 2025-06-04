@@ -63,11 +63,11 @@ class Individuo():
   def mutacao (self,taxa_mutacao):
        # print("Taxa Mutacao-1: %s" % self.cromossomo)
         for i in range(len(self.cromossomo)):
-          if(random() < taxa_mutacao):
-            if self.cromossomo == '1':
-               self.cromossomo[i] = '0'
-            else:
-               self.cromossomo[i] = '1'  
+            if random() < taxa_mutacao:
+                if self.cromossomo[i] == '1':
+                    self.cromossomo[i] = '0'
+                else:
+                    self.cromossomo[i] = '1'
         #print("Taxa Mutacao-2: %s" % self.cromossomo)
         return self
          
@@ -229,5 +229,4 @@ if __name__ == '__main__':
     individuo1.mutacao(0.05)
     individuo2.mutacao(0.05)
     '''
-        
         
